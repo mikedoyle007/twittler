@@ -15,7 +15,7 @@ body {
   ====================================
 */
 header h1{
-	margin: 0;
+	margin: 0 auto;
 	display: block;
 	width: 100%;
 	background-color: #FFFFFF;
@@ -75,5 +75,21 @@ section {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+/*
+  ====================================
+  Hover Class
+  ====================================
+*/
+.hover {
+	background-color: #F0F4F8;
+}
+
+
+
+
+
+
+
+
 
 
