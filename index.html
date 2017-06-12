@@ -25,18 +25,14 @@
           // add the $tweet-boxs into the section
           var $box       = $('<div class="box"></div>');
           var $container = $('<div class="container"></div>');
-          var $name      = $('<div class="name grey"></div>');
+          var $name      = $('<a href="#"class="name grey"></a>');
           var $time      = $('<div class="time grey"></div>');
           var $message   = $('<div class="message"></div>');
           var $avatar    = $('<span class="avatar"></span>');
 
           // contents of tweet-box
           $name.text('@' + tweet.user);
-          var $shortTime = tweet.created_at;
-          // $shortTime = $shortTime.slice();
-          // console.log($shortTime);
           $time.text(tweet.created_at);
-          // $time.text($shortTime);
           $message.text(tweet.message);
 
           var updateTime = function() {
