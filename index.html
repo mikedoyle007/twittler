@@ -19,39 +19,36 @@
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          // $tweet.text('@' + tweet.user + '  ' + tweet.created_at  + ' ' + tweet.message);
-          // create:
-          // $tweet-name = '@' + tweet.user
-          // $tweet-time = tweet.created_at
-          // $tweet-message = tweet.message
-          //
-          // add those all into a $tweet-box
-          //
+          
           // add the $tweet-boxs into the section
-          var $box     = $('<div class="box"></div>');
-          var $name    = $('<div class="name"></div>');
-          var $time    = $('<div class="time"></div>');
-          var $message = $('<div class="message"></div>');
-          var $avatar  = $('<span class="avatar"></span>');
-          // $tweet.text('@' + tweet.user + ': ' + tweet.message);
-
+          var $box       = $('<div class="box"></div>');
+          var $container = $('<div class="container"></div>');
+          var $name      = $('<div class="name"></div>');
+          var $time      = $('<div class="time"></div>');
+          var $message   = $('<div class="message"></div>');
+          var $avatar    = $('<span class="avatar"></span>');
 
           // contents of tweet-box
           $name.text('@' + tweet.user + '  ');
           $time.text(tweet.created_at);
           $message.text(tweet.message);
 
-          // add to tweet-box
-          $name.appendTo($box);
-          $time.appendTo($box);
-          $message.appendTo($box);
+          // format time
+
+          // add to container
+          $name.appendTo($container);
+          $time.appendTo($container);
+          $message.appendTo($container);
+
+          // add to tweetBox
           $avatar.appendTo($box);
+          $container.appendTo($box);
 
           // add tweet-box to section
-
           $box.appendTo($section);
           index -= 1;
         }
+        console.log($time);
 
       });
     </script>
