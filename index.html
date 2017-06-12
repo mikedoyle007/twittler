@@ -12,19 +12,48 @@
       $(document).ready(function(){
         var $body = $('body');
         $body.html('');
+        var $section = $('<section></section>');
+        $section.appendTo($body);
 
         // dynamically adding tweets to body
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div class="tweets"></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
+          // $tweet.text('@' + tweet.user + '  ' + tweet.created_at  + ' ' + tweet.message);
+          // create:
+          // $tweet-name = '@' + tweet.user
+          // $tweet-time = tweet.created_at
+          // $tweet-message = tweet.message
+          //
+          // add those all into a $tweet-box
+          //
+          // add the $tweet-boxs into the section
+          var $box     = $('<div class="box"></div>');
+          var $name    = $('<div class="name"></div>');
+          var $time    = $('<div class="time"></div>');
+          var $message = $('<div class="message"></div>');
+          var $avatar  = $('<span class="avatar"></span>');
+          // $tweet.text('@' + tweet.user + ': ' + tweet.message);
+
+
+          // contents of tweet-box
+          $name.text('@' + tweet.user + '  ');
+          $time.text(tweet.created_at);
+          $message.text(tweet.message);
+
+          // add to tweet-box
+          $name.appendTo($box);
+          $time.appendTo($box);
+          $message.appendTo($box);
+          $avatar.appendTo($box);
+
+          // add tweet-box to section
+
+          $box.appendTo($section);
           index -= 1;
         }
 
       });
-
     </script>
   </body>
 </html>
