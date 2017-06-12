@@ -12,6 +12,8 @@
       $(document).ready(function(){
         var $body = $('body');
         $body.html('');
+        var $header = $('<header><h1>Twittler</h1></header>');
+        $header.appendTo($body);
         var $section = $('<section></section>');
         $section.appendTo($body);
 
@@ -23,13 +25,13 @@
           // add the $tweet-boxs into the section
           var $box       = $('<div class="box"></div>');
           var $container = $('<div class="container"></div>');
-          var $name      = $('<div class="name"></div>');
-          var $time      = $('<div class="time"></div>');
+          var $name      = $('<div class="name grey"></div>');
+          var $time      = $('<div class="time grey"></div>');
           var $message   = $('<div class="message"></div>');
           var $avatar    = $('<span class="avatar"></span>');
 
           // contents of tweet-box
-          $name.text('@' + tweet.user + '  ');
+          $name.text('@' + tweet.user);
           $time.text(tweet.created_at);
           $message.text(tweet.message);
 
@@ -48,7 +50,6 @@
           $box.appendTo($section);
           index -= 1;
         }
-        console.log($time);
 
       });
     </script>
