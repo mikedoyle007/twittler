@@ -32,10 +32,22 @@
 
           // contents of tweet-box
           $name.text('@' + tweet.user);
+          var $shortTime = tweet.created_at;
+          // $shortTime = $shortTime.slice();
+          // console.log($shortTime);
           $time.text(tweet.created_at);
+          // $time.text($shortTime);
           $message.text(tweet.message);
 
-          // format time
+          var updateTime = function() {
+            var $day = $time.text().slice(0, 4);
+            var $date = $time.text().slice(4, 11);
+            var $year = $time.text().slice(11, 15);
+            var $hour = $time.text().slice(15, 21);
+            
+            $time.text($day + ' ' + $date + ' @ ' + $hour);
+          };
+          updateTime();
 
           // add to container
           $name.appendTo($container);
