@@ -8,20 +8,16 @@
 body {
 	background: #F3F6F9;
 	margin-top: 50px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-
 section {
-	background: pink;
-	height: 500px;
-	width: 500px;
+	margin: 0 auto;
 }
-
 /*
   ====================================
   Tweets Section
   ====================================
 */
-
 .box {
 	display: block;
 	margin: 2px auto;
@@ -30,4 +26,28 @@ section {
 	padding: 7px 5px;
 	text-align: left;
 }
+.avatar {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin: 5px 5px;
+	background-color: pink;
+	border-radius: 5px;
+	float: left;
+}
+.container {
+	display: inline-block;
+	padding-left: 5px;
+	padding-top: 5px;
+	background-color: lavender;
+}
+.name {
+	color: #7A8FA6;
+
+}
+.time {
+}
+.message {
+}
+
 
