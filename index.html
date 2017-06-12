@@ -63,6 +63,15 @@
           index -= 1;
         }
 
+        // hover styles
+        $('.box').on('mouseenter', function() {
+          $(this).addClass('hover');
+        });
+
+        $('.box').on('mouseleave', function() {
+          $(this).removeClass('hover');
+        });
+
       });
     </script>
   </body>
