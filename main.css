@@ -9,12 +9,40 @@ body {
 	background: #F3F6F9;
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+.home {
+	background-image: url('home.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.shawndrost {
+	background-image: url('beach.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.douglascalhoun {
+	background-image: url('sky.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.mracus {
+	background-image: url('hike.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.sharksforcheap {
+	background-image: url('sky2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 /*
   ====================================
   Header
   ====================================
 */
-header h1{
+header {
+	opacity: 0.9;
+}
+h1{
 	margin: 0 auto;
 	display: block;
 	width: 100%;
@@ -23,6 +51,7 @@ header h1{
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	opacity: 1;
 }
 /*
   ====================================
@@ -44,6 +73,7 @@ section {
 	background-color: #FFFFFF;
 	padding: 7px 5px;
 	text-align: left;
+	opacity: 0.95;
 }
 .grey, a {
 	color: #7A8FA6;
@@ -82,6 +112,7 @@ section {
 */
 .hover {
 	background-color: #F0F4F8;
+	opacity: 1;
 }
 /*
   ====================================
