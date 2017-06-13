@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery.js"></script>
+    <script src="data_generator.js"></script>
+  </head>
+  <body>
+
+    <script>
+
+      $(document).ready(function(){
+        var $body = $('body');
+        $body.html('');
+        var $header = $('<header><h1>@sharksforcheap</h1></header>');
+        $header.text($name);
+        $header.appendTo($body);
+        var $section = $('<section></section>');
+        $section.appendTo($body);
+
+        // dynamically adding tweets to body
+        // var index = streams.home.length - 1;
+        var index = streams.users.sharksforcheap.length - 1;
+        while(index >= 0){
+          var tweet = streams.users.sharksforcheap[index];
+          
+          // add the $tweet-boxs into the section
+          var $box       = $('<div class="box"></div>');
+          var $container = $('<div class="container"></div>');
+          var $name      = $('<a href="#"class="name grey"></a>');
+          var $time      = $('<div class="time grey"></div>');
+          var $message   = $('<div class="message"></div>');
+          var $avatar    = $('<span class="avatar"></span>');
+
+          // contents of tweet-box
+          $name.text('@' + tweet.user);
+          $time.text(tweet.created_at);
+          $message.text(tweet.message);
+
+          var updateTime = function() {
+            var $day = $time.text().slice(0, 4);
+            var $date = $time.text().slice(4, 11);
+            var $year = $time.text().slice(11, 15);
+            var $hour = $time.text().slice(15, 21);
+            
+            $time.text($day + ' ' + $date + ' @ ' + $hour);
+          };
+          updateTime();
+
+          // add to container
+          $name.appendTo($container);
+          $time.appendTo($container);
+          $message.appendTo($container);
+
+          // add to tweetBox
+          $avatar.appendTo($box);
+          $container.appendTo($box);
+
+          // add tweet-box to section
+          $box.appendTo($section);
+          index -= 1;
+        }
+
+        // hover styles
+        $('.box').on('mouseenter', function() {
+          $(this).addClass('hover');
+        });
+
+        $('.box').on('mouseleave', function() {
+          $(this).removeClass('hover');
+        });
+
+      });
+    </script>
+  </body>
+</html>
