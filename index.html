@@ -27,7 +27,7 @@
           var $container = $('<div class="container"></div>');
           var $time      = $('<div class="time grey"></div>');
           var $message   = $('<div class="message"></div>');
-          var $avatar    = $('<span class="avatar"></span>');
+          var $avatar    = getUserAvatar(tweet.user);
           var $name      = getUserName(tweet.user);
 
           function getUserName(user) {
@@ -42,6 +42,20 @@
               username = $('<a href="sharksforcheap.html">class="name grey"></a>');
             }
             return username;
+          };
+
+          function getUserAvatar(user) {
+            var avatar = $("<img class='avatar'>");
+            if (user === 'shawndrost') {
+              avatar = $("<img src='shawndrost.jpg' class='avatar shawndrost'>");
+            } else if (user === 'douglascalhoun') {
+              avatar = $("<img src='douglascalhoun.jpg' class='avatar douglascalhoun'>");
+            } else if (user === 'mracus') {
+              avatar = $("<img src='mracus.jpg' class='avatar mracus'>");
+            } else if (user === 'sharksforcheap') {
+              avatar = $("<img src='sharksforcheap.jpg' class='avatar sharksforcheap'>");
+            }
+            return avatar;
           };
 
           // contents of tweet-box
