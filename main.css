@@ -45,7 +45,7 @@ section {
 	padding: 7px 5px;
 	text-align: left;
 }
-.grey {
+.grey, a {
 	color: #7A8FA6;
 }
 .avatar {
@@ -90,7 +90,26 @@ section {
 */
 a {
 	text-decoration: none;
+	color: ;
 }
+/*
+  ====================================
+  User Page
+  ====================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
