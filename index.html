@@ -25,10 +25,24 @@
           // add the $tweet-boxs into the section
           var $box       = $('<div class="box"></div>');
           var $container = $('<div class="container"></div>');
-          var $name      = $('<a href="#"class="name grey"></a>');
           var $time      = $('<div class="time grey"></div>');
           var $message   = $('<div class="message"></div>');
           var $avatar    = $('<span class="avatar"></span>');
+          var $name      = getUserName(tweet.user);
+
+          function getUserName(user) {
+            var username = $('<a href="#">class="name grey"></a>');
+            if (user === 'shawndrost') {
+              username = $('<a href="shawndrost.html">class="name grey"></a>');
+            } else if (user === 'douglascalhoun') {
+              username = $('<a href="douglascalhoun.html">class="name grey"></a>');
+            } else if (user === 'mracus') {
+              username = $('<a href="mracus.html">class="name grey"></a>');
+            } else if (user === 'sharksforcheap') {
+              username = $('<a href="sharksforcheap.html">class="name grey"></a>');
+            }
+            return username;
+          };
 
           // contents of tweet-box
           $name.text('@' + tweet.user);
@@ -72,3 +86,14 @@
     </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
